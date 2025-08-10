@@ -1,0 +1,21 @@
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def insert_at_end(head, x):
+    new_node = ListNode(x)
+    
+    # If the list is empty, the new node becomes the head
+    if head is None:
+        return new_node
+    
+    # Traverse to the end of the list
+    current = head
+    while current.next:
+        current = current.next
+    
+    # Append the new node
+    current.next = new_node
+    
+    return head
