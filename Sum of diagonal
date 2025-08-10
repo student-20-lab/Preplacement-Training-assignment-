@@ -1,0 +1,8 @@
+def sum_diagonals(matrix):
+    n = len(matrix)
+    main_diag = sum(matrix[i][i] for i in range(n))
+    sec_diag = sum(matrix[i][n-i-1] for i in range(n))
+    return main_diag + sec_diag - (matrix[n//2][n//2] if n % 2 else 0)
+
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
+print("Sum of diagonals:", sum_diagonals(matrix))
