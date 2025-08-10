@@ -1,0 +1,7 @@
+def is_sparse(matrix):
+    total = len(matrix) * len(matrix[0])
+    zero_count = sum(row.count(0) for row in matrix)
+    return zero_count > total / 2
+
+matrix = [[0, 0, 3], [0, 0, 0], [0, 2, 0]]
+print("Sparse Matrix" if is_sparse(matrix) else "Not Sparse")
