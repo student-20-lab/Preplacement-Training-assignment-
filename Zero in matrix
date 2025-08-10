@@ -1,0 +1,3 @@
+matrix = [[0, 0, 1], [0, 1, 2], [1, 2, 3]]
+zero_count = sum(row.count(0) for row in matrix)
+print("Zero count:", zero_count)
