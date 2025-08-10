@@ -1,0 +1,9 @@
+def insert_at_end(arr, element):
+    arr.append(element)
+    return arr
+
+
+arr = [1, 2, 3, 4]
+element = 5
+print("Updated Array:", insert_at_end(arr, element))
+
