@@ -1,0 +1,9 @@
+a = [3, 2, 0, 5]  
+b = [1, 0, 4]     
+n = max(len(a), len(b))
+res = [0]*n
+for i in range(n):
+    val1 = a[i] if i < len(a) else 0
+    val2 = b[i] if i < len(b) else 0
+    res[i] = val1 + val2
+print("Sum:", res)
