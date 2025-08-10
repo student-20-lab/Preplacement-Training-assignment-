@@ -1,0 +1,7 @@
+a = [1, 2, 3] 
+b = [4, 5]     
+res = [0] * (len(a) + len(b) - 1)
+for i in range(len(a)):
+    for j in range(len(b)):
+        res[i+j] += a[i] * b[j]
+print("Result:", res)
