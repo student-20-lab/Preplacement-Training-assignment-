@@ -6,15 +6,15 @@ class Node:
 class Solution:
     def sortedInsert(self, head, x):
         new_node = Node(x)
-        #for empty list
+        
         if head is None:
             return new_node
-        #for insertion before head
+    
         if x<head.data:
             new_node.next = head
             head.prev = new_node
             return new_node
-        #insertion after the head (somewhere)
+        
         curr = head
         while curr.next and curr.next.data<x:
             curr = curr.next
